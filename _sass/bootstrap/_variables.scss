@@ -27,7 +27,7 @@ $brand-danger:          #d9534f !default;
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               #fff !default;
+$body-bg:               #263258 !default;
 //** Global text color on `<body>`.
 $text-color:            $gray-dark !default;
 
@@ -375,7 +375,7 @@ $navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
 
 // Navbar links
 $navbar-default-link-color:                #fff !default;
-$navbar-default-link-hover-color:          #f90 !default;
+$navbar-default-link-hover-color:          #fda !default;
 $navbar-default-link-hover-bg:             transparent !default;
 $navbar-default-link-active-color:         #eee !default;
 $navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%) !default;
@@ -491,7 +491,7 @@ $pager-disabled-color:                 $pagination-disabled-color !default;
 
 $jumbotron-padding:              30px !default;
 $jumbotron-color:                inherit !default;
-$jumbotron-bg:                   $gray-lighter !default;
+$jumbotron-bg:                   #b3e5fc !default;
 $jumbotron-heading-color:        inherit !default;
 $jumbotron-font-size:            ceil(($font-size-base * 1.5)) !default;
 $jumbotron-heading-font-size:    ceil(($font-size-base * 4.5)) !default;

@@ -29,7 +29,7 @@ $brand-danger:          #d9534f !default;
 //** Background color for `<body>`.
 $body-bg:               #263258 !default;
 //** Global text color on `<body>`.
-$text-color:            $gray-dark !default;
+$text-color:            #fff !default;
 
 //** Global textual link color.
 $link-color:            $brand-primary !default;
@@ -80,7 +80,7 @@ $headings-color:          inherit !default;
 
 // [converter] If $bootstrap-sass-asset-helper if used, provide path relative to the assets load path.
 // [converter] This is because some asset helpers, such as Sprockets, do not work with file-relative paths.
-$icon-font-path: if($bootstrap-sass-asset-helper, "bootstrap/", "../fonts/bootstrap/") !default;
+$icon-font-path: if($bootstrap-sass-asset-helper, "bootstrap/", "/assets/fonts/bootstrap/") !default;
 
 //** File name for all font files.
 $icon-font-name:          "glyphicons-halflings-regular" !default;
@@ -490,7 +490,7 @@ $pager-disabled-color:                 $pagination-disabled-color !default;
 //##
 
 $jumbotron-padding:              30px !default;
-$jumbotron-color:                inherit !default;
+$jumbotron-color:                $gray-dark !default;
 $jumbotron-bg:                   #b3e5fc !default;
 $jumbotron-heading-color:        inherit !default;
 $jumbotron-font-size:            ceil(($font-size-base * 1.5)) !default;

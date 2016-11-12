@@ -1,3 +1,13 @@
 <script>
     Waves.init();
+    $('.collapse').collapse();
+
+    {% if page.layout == "homepage" %}
+    $(document).ready(function(){
+        var windowWidth = $(window).width();
+        if(windowWidth <= 1024) //for iPad & smaller devices
+            $('.panel-collapse').removeClass('in')
+    });
+    {% endif %}
+
 </script>

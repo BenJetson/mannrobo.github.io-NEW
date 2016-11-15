@@ -1,13 +1,13 @@
 <script>
-    Waves.init();
-    $('.collapse').collapse();
 
-    {% if page.layout == "homepage" %}
-    $(document).ready(function(){
-        var windowWidth = $(window).width();
-        if(windowWidth <= 1024) //for iPad & smaller devices
-            $('.panel-collapse').removeClass('in')
-    });
-    {% endif %}
+    // Initialize the Waves plugin
+    Waves.init();
+    
+    // Initialize collapsible elements.
+    $('.collapse').collapse("hide");
+
+    {% if page.desktopUnCollapse %}// Make collapsible panels open by default on desktop
+    initFunctions.desktopUnCollapse();
+    {% else %}// Desktop UnCollapse not requested.{% endif %}
 
 </script>

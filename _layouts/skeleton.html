@@ -10,6 +10,12 @@
 
         {% include navigation.html %}
 
+        <noscript>
+            <div class="alert alert-danger">
+                <strong>WARNING:</strong> Either your browser doesn't support JavaScript or a preference/extension is preventing it from functioning. Be advised that parts of this web application will not function correctly without it.
+            </div>
+        </noscript>
+
         {{content }}
 
         {% include footer.html %}

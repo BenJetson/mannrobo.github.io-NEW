@@ -13,27 +13,40 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse navbar-right">
         <ul class="nav navbar-nav">
-        <li class="active waves-effect waves-light"><a href="#">Home</a></li>
-        <li class="waves-effect waves-light"><a href="#about">Updates</a></li>
-        <li class="waves-effect waves-light"><a href="#contact">Gallery</a></li>
-        <li class="dropdown">
-            <a href="#" class="waves-effect waves-light dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-            <li><a class="waves-effect" href="#">Calendar</a></li>
-            <li><a class="waves-effect" href="#">Resources</a></li>
-            <li><a class="waves-effect" href="#">Contact Us</a></li>
-            <li role="separator" class="divider"></li>
-            <li class="dropdown-header">Team Members:</li>
-            <li><a class="waves-effect" href="#">Team Handbook</a></li>
-            <li><a class="waves-effect" href="#">Mann Homepage</a></li>
-            </ul>
-        </li>
+            {% assign nav-counter = 0 %}
+            {% assign main-link-max = 3 %}
+            {% assign main-link-max = main-link-max | plus: 1 %}
+            {% assign extra-nav-items = "" | split: "" %}
+            
+            {% for item in site.data.navigation %}
+                {% assign nav-counter = nav-counter | plus: 1 %}
+                
+                {% if main-link-max > nav-counter %}
+                    
+                    <li><a class="waves-effect" href="{{ item.href | prepend: site.url }}">{{item.text}}</a></li>
+                    
+                {% else %}
+                    
+                    {% assign extra-nav-items = extra-nav-items | push: item %}
+                    
+                {% endif %}
+            {% endfor %}
+            
+            {% assign num-extra-items = extra-nav-items | size %}
+            
+            {% if num-extra-items > 1 %}
+            <li class="dropdown">
+                <a href="#" class="waves-effect waves-light dropdown-toggle" 
+                    data-toggle="dropdown" role="button" aria-haspopup="true" 
+                    aria-expanded="false">More <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    {% for item in extra-nav-items %}
+                    <li><a class="waves-effect" href="{{item.href | prepend: site.url}}">{{item.text}}</a></li>
+                    {% endfor %}
+                </ul>
+            </li>
+            {% endif %}
         </ul>
-        <!--<ul class="nav navbar-nav navbar-right">
-        <li><a href="../navbar/">Default</a></li>
-        <li class="active"><a href="./">Static top <span class="sr-only">(current)</span></a></li>
-        <li><a href="../navbar-fixed-top/">Fixed top</a></li>
-        </ul>-->
-    </div><!--/.nav-collapse -->
+    </div>
     </div>
 </nav>

@@ -20,3 +20,12 @@
     border-top: 1px solid $gray-light;
     padding-top: 12px;
 }
+
+.post-list-item .post-excerpt {
+    line-height: 1.2;
+    height: 5em;    
+}
+
+.post-meta {
+    margin-bottom: 5px;
+}

@@ -1,28 +1,30 @@
 ---
 layout: homepage
+dotdotdot: true
 ---
     <div class="row">
         <div class="col-xs-12 col-sm-4">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Posts</h3>
+                    <h3 class="panel-title">Recent Posts</h3>
                 </div>
                 <!--<div class="panel-body">
                 </div>-->
                 <div class="list-group">
-                    <a class="list-group-item" href="#">
-                        <h4 class="list-group-item-heading">Post Title</h4>
-                        <p>Lorem ipsum dolor sit amet escrupting schelting elit plerebus unum</p>
+                    {% for post in site.posts limit: 2 %}
+                    <a class="list-group-item post-list-item" href="{{post.url}}">
+                        <div class="post-meta">
+                            <h4 class="list-group-item-heading post-title">{{post.title}}</h4>
+                            <div>
+                                by <span class="post-author">{{post.author}}</span>
+                                &nbsp;&middot;&nbsp;
+                                <span class="post-date">{{post.date | date: "%B %-d, %Y"}}</span>
+                            </div>
+                        </div>
+                        <div class="post-excerpt ellipsis">{{post.excerpt | strip_html}}</div>
                     </a>
-                    <a class="list-group-item" href="#">
-                        <h4 class="list-group-item-heading">Post Title</h4>
-                        <p>Lorem ipsum dolor sit amet escrupting schelting elit plerebus unum</p>
-                    </a>
-                    <a class="list-group-item" href="#">
-                        <h4 class="list-group-item-heading">Post Title</h4>
-                        <p>Lorem ipsum dolor sit amet escrupting schelting elit plerebus unum</p>
-                    </a>
-                    <a href="#" class="list-group-item">More...</a>
+                    {% endfor %}
+                    <a href="{{site.url}}posts" class="list-group-item">More...</a>
                 </div>
             </div>
         </div>
@@ -34,9 +36,13 @@ layout: homepage
                 <!--<div class="panel-body">
                 </div>-->
                 <div class="list-group">
-                    <a class="list-group-item" href="#">
-                        <h4 class="list-group-item-heading">Tournament</h4>
-                        <p>10/29/2016 &#circle; 3:00p<br>@ J.L. Mann High School</p>
+                    <a class="list-group-item event-list-item" href="#">
+                        <h4 class="list-group-item-heading event-title">Mann VRC Qualifier Tournament</h4>
+                        <div>
+                            <span class="event-date">10/29/2016</span> &bullet; 
+                            <span class="event-time">3:00p</span>
+                        </div>
+                        <div>@ <span class="event-location">J.L. Mann High School</span></div>
                     </a>
                     <a class="list-group-item" href="#">
                         <h4 class="list-group-item-heading">Post Title</h4>

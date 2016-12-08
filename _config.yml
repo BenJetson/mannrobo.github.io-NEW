@@ -16,9 +16,9 @@
 title: Mann Robotics
 email: BenJetson@users.noreply.github.com
 description: > # this means to ignore newlines until "baseurl:"
-  Mann Robotics is an active VEX Robotics club of two teams.
-  We participate in high-school level VRC every year, and have for
-  the past two seasons.
+  Mann Robotics is a high-school VRC organization
+  based in Greenville, South Carolina. We send three
+  teams every year to VRC.
 baseurl: "" # the subpath of your site, e.g. /blog
 # url: "http://127.0.0.1:4000/" # the base hostname & protocol for your site
 url: "http://bgodfrey.me/bootstrap-testing/"

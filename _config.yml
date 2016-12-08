@@ -13,20 +13,42 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Bootstrap Testing Site
+title: Mann Robotics
 email: BenJetson@users.noreply.github.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Mann Robotics is an active VEX Robotics club of two teams.
+  We participate in high-school level VRC every year, and have for
+  the past two seasons.
 baseurl: "" # the subpath of your site, e.g. /blog
 # url: "http://127.0.0.1:4000/" # the base hostname & protocol for your site
 url: "http://bgodfrey.me/bootstrap-testing/"
-github_username:  benjetson
+github_username: mannrobo
+repository: benjetson/bootstrap-testing
 
 # Build settings
 markdown: kramdown
+exclude: 
+  - .bundle
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - ATTRIBUTION.md
+  - .tests
+safe: true
+gems:
+  - jekyll-paginate
+  - jekyll-redirect-from
+  - jemoji
+whitelist:
+  - jekyll-paginate
+  - jekyll-redirect-from
+  - jemoji
+paginate: 10
+paginate_path: "updates/page/:num/"
+permalink: "updates/:year/:month/:day/:title/"
 
+# YAML Frontmatter Defaults
 defaults:
   -
     scope:
@@ -34,3 +56,8 @@ defaults:
     values:
       layout: "default"
       desktopUnCollapse: false
+  -
+    scope:
+      path: "js"
+    values:
+      layout: null

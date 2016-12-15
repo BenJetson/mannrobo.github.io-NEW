@@ -47,6 +47,10 @@ paginate: 10
 paginate_path: "updates/page/:num/"
 permalink: "updates/:year/:month/:day/:title/"
 
+globalDeps:
+  - waves
+  - collapse
+
 # YAML Frontmatter Defaults
 defaults:
   -
@@ -54,7 +58,6 @@ defaults:
       path: ""
     values:
       layout: "default"
-      desktopUnCollapse: false
   -
     scope:
       path: "js"

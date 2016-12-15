@@ -14,7 +14,9 @@
         {% if page.dotdotdot %}// Initialize the dotdotdot truncation plugin.
         initFunctions.dotdotdot();
         {% else %}// dotdotdot plugin not requested.{% endif %}
-        {% for request in page.initDeps %}xinitFunctions.{{request}}(); // Initialize {{request}}{% endfor %}
+        {% for request in page.initDeps %}// Initialize {{request}}
+        initFunctions.{{request}}(); 
+        {% endfor %}
 
     });
 

@@ -1,3 +1,5 @@
+---
+---
 var initFunctions = {
     desktopUnCollapse: function() {
         if ($(window).width() >= 1024) {

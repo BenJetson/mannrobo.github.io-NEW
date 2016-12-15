@@ -25,6 +25,8 @@ github_username: mannrobo
 repository: benjetson/bootstrap-testing
 
 # Build settings
+keep-files:
+  - assets
 markdown: kramdown
 exclude: 
   - .bundle

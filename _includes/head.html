@@ -17,8 +17,8 @@
     <!-- Waves Library -->
     <script defer src="{{site.url}}js/waves.min.js"></script>
 
-    <!-- jQuery dotdotdot Library -->
-    <script defer src="{{site.url}}js/jquery.dotdotdot.min.js"></script>
+    {% if page.deps contains "dotdotdot" %}<!-- jQuery dotdotdot Library -->
+    <script defer src="{{site.url}}js/jquery.dotdotdot.min.js"></script>{% else %}<!-- dotdotdot not requested. -->{% endif %}
 
     <!-- Page Init Library -->
     <script defer src="{{site.url}}js/depend-initialize.js"></script>

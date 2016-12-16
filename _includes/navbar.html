@@ -1,0 +1,75 @@
+<div id="app-navfix">
+   <nav class="blue lighten-1" role="navigation">
+    <div class="nav-wrapper container">
+        <a id="logo-container" href="{{ site.url }}" class="brand-logo waves-effect waves-light">
+            <img src="{{ 'img/logo-ext-sm.png' | prepend: site.url }}" 
+                 alt="Mann Robotics Logo" class="responsive-img site-logo hide-on-small-only" style="height: 64px;">
+            <img src="{{ 'img/logo-sm.png' | prepend: site.url }}"
+                 alt="Mann Robotics Logo" class="responsive-img site-logo hide-on-med-and-up" style="height: 56px;">
+        </a>
+        
+        <ul class="right hide-on-med-and-down">
+            {% assign nav-counter = 0 %}
+            {% assign main-link-max = 3 %}
+            {% assign main-link-max = main-link-max | plus: 1 %}
+            {% assign extra-nav-items = "" | split: "" %}
+            
+            {% for item in site.data.navigation %}
+                {% assign nav-counter = nav-counter | plus: 1 %}
+                
+                {% if main-link-max > nav-counter %}
+                    
+                    <li><a class="waves-effect waves-light" href="{{ item.href | prepend: site.url }}">{{item.text}}</a></li>
+                    
+                {% else %}
+                    
+                    {% assign extra-nav-items = extra-nav-items | push: item %}
+                    
+                {% endif %}
+            {% endfor %}
+            
+            {% assign num-extra-items = extra-nav-items | size %}
+            
+            {% if num-extra-items > 1 %}
+            <li>
+                <a class="dropdown-button waves-effect waves-light" href="#!" data-activates="nav-more-menu">
+                    &nbsp;&nbsp;More<i class="material-icons right">arrow_drop_down</i>
+                </a>
+            </li>
+            {% endif %}
+        </ul>
+        
+        {% if num-extra-items > 1 %}
+        <ul id="nav-more-menu" class="dropdown-content">
+            {% for item in extra-nav-items %}
+            <li><a class="waves-effect" href="{{ item.href | prepend: site.url }}">{{item.text}}</a></li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+        <ul id="nav-mobile" class="side-nav">
+            <li class="logo blue lighten-2">
+                <img class="responsive-img menu-logo" src="{{'img/logo.png' | prepend: site.url}}">
+            </li>
+            {% for item in site.data.navigation %}
+                <li>
+                    <a class="waves-effect" href="{{ item.href | prepend: site.url}}">
+                        <div class="row">
+                            <div class="col s3"><i class="material-icons">{{ item.icon }}</i></div>
+                            <div class="col s9 valign-wrapper">{{ item.text }}</div>
+                        </div>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+        <a href="#" data-activates="nav-mobile" id="app-navbtn"
+           class="button-collapse waves-effect waves-light hide">
+            <i class="material-icons" style="font-size: 2rem;">menu</i>
+        </a>
+        <a href="#" class="waves-effect waves-light hide" id="app-backbtn" 
+           onclick="if (1 < history.length && document.referrer) {window.history.back();} else {window.location.href = '{{site.url}}';}">
+            <i class="material-icons" style="font-size: 2rem;">arrow_back</i>
+        </a>
+    </div>
+  </nav>
+</div>

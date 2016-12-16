@@ -1,0 +1,59 @@
+---
+layout: default
+---
+<div class="container">
+    <div class="row post-meta">
+        <div class="col s12">
+            <h4>{{page.title}}</h4>
+            <div>
+                Posted on <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time> by
+                {% include author-badge.html %}
+            </div>
+            {% if page.tags.size > 0 %}
+            <div>
+                Tagged
+                {% for post-tag in page.tags %}
+                <div class="chip">{{post-tag}}</div>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 post-content">
+            {{content}}
+
+            {% if page.yt %}
+            {% for vidID in page.yt %}
+            <iframe id="ytplayer" type="text/html"
+                    src="https://www.youtube.com/embed/{{vidID}}"
+                    frameborder="0" class="responsive-yt"></iframe>
+            {% endfor %}
+            {% endif %}
+
+        </div>
+    </div>
+</div>
+
+{% if page.autoImg %}
+<script>
+    
+    /*
+     * Makes images use Materialbox and adds the source caption.
+     * 
+     * For more details as to why we're doing this client-side
+     *   with jQuery, see ticket mannrobo/mannrobo.github.io#20
+     */
+    
+    $(document).ready(function() {
+        $("div.post-content img").each(function() {
+            $(this).unwrap("<p></p>");
+            $(this).wrap('<div class="center-align post-img-container"></div>');
+            $(this).addClass("responsive-img materialboxed");
+            $(this).after("<span class='grey-text text-darken-1 truncate'>Source: " + $(this).attr("alt") + "</span>");
+        });
+        
+        $(".materialboxed").materialbox();
+    });
+</script>
+{% endif %}

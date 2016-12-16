@@ -1,0 +1,108 @@
+/* Styling for the navbar */
+
+.site-logo {
+    display: block;
+    padding: 5px;
+}
+
+/* Additional Layout Tweaks */
+
+div.row.no-margin {
+    margin: 0;
+}
+
+/* Sidenav Styling */
+
+img.menu-logo {
+    display: block;
+    margin: 0 auto;
+    padding: 25px 0;
+    width: 170px;
+}
+
+ul.side-nav li a {
+    height: 50px;
+}
+
+
+@font-face {
+    font-family: 'custom-icons';
+    src: url('https://mannrobo.github.io/fonts/custom_icons.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.custom-icons {
+    font-family: "custom-icons";
+    font-style: normal;
+}
+
+img.center-img {
+    display: block;
+    margin: 0 auto;
+}
+
+img.gallery-img {
+    margin-bottom: 20px;
+}
+
+/* Post Styling */
+
+iframe.responsive-yt {
+    display: block;
+    width: 500px;
+    height: 250px;
+    max-width: 100%;
+    margin: 0 auto 15px auto;
+}
+
+div.post-img-container {
+    max-width: 100%;
+    margin: 0 auto;
+    width: 400px;
+}
+
+div.post-img-container img {
+    display: block;
+}
+
+div.post-img-container span {
+    margin-top: .25em;
+    font-style: italic;
+}
+
+div.post-meta div.chip {
+    margin-bottom: 7px;
+}
+
+div.post-meta {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 0px;
+}
+
+/* Standalone Web App Styling (CRX) */
+
+@media all and (display-mode: standalone) {
+    /* Here goes the CSS rules that will only apply if app is running standalone */
+}
+
+/* Fixes Materialize CSS' error in
+   browser-default styling for
+   unordered lists.*/
+ul.browser-default li {
+    list-style-type: disc;
+    list-style-position: inside;
+    margin-left: 15px;
+}
+
+footer.page-footer {
+    margin-top: 0;
+}
+
+/* Fixes bug in Materialize Input field
+     label spacing. */
+
+.input-field label {
+    left: 0; 
+}

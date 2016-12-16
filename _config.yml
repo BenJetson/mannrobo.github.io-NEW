@@ -1,0 +1,70 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Mann Robotics
+email: mannrobo@users.noreply.github.com
+github_username: mannrobo
+repository: mannrobo/mannrobo.github.io
+timezone: America/New_York
+description: > # this means to ignore newlines until "baseurl:"
+  Mann Robotics is an active VEX Robotics club of two teams.
+  We participate in high-school level VRC every year, and have for
+  the past two seasons.
+baseurl: "" 
+        # ^ the subpath of your site, e.g. /blog
+url: "https://mannrobo.github.io/" 
+        # ^ for when hosted online at gh-pages
+# url: "http://127.0.0.1:4000/" 
+        # ^ for when editing with a local jekyll server
+
+# Build settings
+dev-warn: true
+markdown: kramdown
+exclude: 
+  - .bundle
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - ATTRIBUTION.md
+  - .tests
+safe: true
+gems:
+  - jekyll-paginate
+  - jekyll-redirect-from
+  - jemoji
+whitelist:
+  - jekyll-paginate
+  - jekyll-redirect-from
+  - jemoji
+paginate: 10
+paginate_path: "updates/page/:num/"
+permalink: "updates/:year/:month/:day/:title/"
+
+# YAML Frontmatter Defaults
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+      hideBack: false
+      bigNav: false
+      smoothAnchor: false
+  -
+    scope:
+      path: "_posts"
+    values:
+      category: "updates"
+      layout: "post"
+      autoImg: true
+  -
+    scope:
+      path: "js"
+    values:
+      layout: null

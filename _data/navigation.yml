@@ -1,0 +1,34 @@
+-
+  text: Home
+  href:
+  icon: home
+
+#-
+#  text: About
+#  href: about
+#  icon: people
+
+-
+  text: Updates
+  href: updates
+  icon: announcement
+
+-
+  text: Gallery
+  href: gallery
+  icon: photo
+
+-
+  text: Calendar
+  href: calendar
+  icon: today
+
+-
+  text: Resources
+  href: resources
+  icon: book
+
+-
+  text: Contact
+  href: contact
+  icon: email

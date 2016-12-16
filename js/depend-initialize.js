@@ -1,5 +1,3 @@
----
----
 var dependencies = {
     desktopUnCollapse: function() {
         if ($(window).width() >= 1024) {

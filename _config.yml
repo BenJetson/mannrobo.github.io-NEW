@@ -29,6 +29,7 @@ keep-files:
   - assets
 markdown: kramdown
 exclude: 
+  - oldsite
   - .bundle
   - vendor
   - Gemfile

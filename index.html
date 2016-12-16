@@ -1,0 +1,180 @@
+---
+layout: homepage
+deps: ["dotdotdot"]
+---
+    <div class="row">
+        <div class="col-xs-12 col-sm-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Recent Posts</h3>
+                </div>
+                <!--<div class="panel-body">
+                </div>-->
+                <div class="list-group">
+                    {% for post in site.posts limit: 2 %}
+                    <a class="list-group-item post-list-item" href="{{post.url}}">
+                        <div class="post-meta">
+                            <h4 class="list-group-item-heading post-title">{{post.title}}</h4>
+                            <div>
+                                by <span class="post-author">{{post.author}}</span>
+                                &nbsp;&middot;&nbsp;
+                                <span class="post-date">{{post.date | date: "%B %-d, %Y"}}</span>
+                            </div>
+                        </div>
+                        <div class="post-excerpt ellipsis">{{post.excerpt | strip_html}}</div>
+                    </a>
+                    {% endfor %}
+                    <a href="{{site.url}}posts" class="list-group-item">More...</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Events</h3>
+                </div>
+                <div class="panel-body">
+                    <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=250&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=greenvilleschools.us_hd8j7sdcdcl7qhbmuto5trbpk0%40group.calendar.google.com&amp;color=%238C500B&amp;ctz=America%2FNew_York" style="border-width:0" width="100%" height="250px" frameborder="0" scrolling="no"></iframe>
+                </div>
+                <div class="list-group">
+                    <a href="{{site.url}}calendar" class="list-group-item">More...</a>
+                </div>
+                <!--<div class="list-group">
+                    <a class="list-group-item event-list-item" href="#">
+                        <h4 class="list-group-item-heading event-title">Mann VRC Qualifier Tournament</h4>
+                        <div>
+                            <span class="event-date">10/29/2016</span> &bullet; 
+                            <span class="event-time">3:00p</span>
+                        </div>
+                        <div>@ <span class="event-location">J.L. Mann High School</span></div>
+                    </a>
+                    <a class="list-group-item" href="#">
+                        <h4 class="list-group-item-heading">Post Title</h4>
+                        <p>Lorem ipsum dolor sit amet escrupting schelting elit plerebus unum</p>
+                    </a>
+                    <a class="list-group-item" href="#">
+                        <h4 class="list-group-item-heading">Post Title</h4>
+                        <p>Lorem ipsum dolor sit amet escrupting schelting elit plerebus unum</p>
+                    </a>
+                    <a href="{{site.url}}calendar" class="list-group-item">More...</a>
+                </div>-->
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">About Us</h3>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-xs-12 col-md-4">
+                    <img class="img-responsive" src="https://mannrobo.github.io/img/teamphoto.jpg">
+                    <div class="pad-top"></div>
+                </div>
+                <div class="col-xs-12 col-md-8">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper, metus hendrerit dignissim venenatis, tortor massa imperdiet lacus, ac sollicitudin leo massa eu mauris. Fusce eget fermentum est. Curabitur sem nunc, rutrum vitae viverra imperdiet, vehicula in urna. Quisque egestas sapien erat, nec vestibulum felis laoreet in. Integer eget maximus libero, ut rhoncus eros. Sed luctus vehicula felis in fermentum. Donec velit sem, hendrerit at dui vel, convallis hendrerit quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ut quam mattis, maximus mi nec, laoreet nulla. Aenean vehicula vel libero vel tempus. Morbi accumsan tortor est, eu faucibus arcu consectetur a. Fusce dolor dolor, luctus at sagittis vel, dignissim ut sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Team 3796A</h3>Mann Made
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-xs-12 col-md-4">
+                    <img class="img-responsive" src="https://dummyimage.com/800x500/000000/fff">
+                </div>
+                <div class="col-xs-12 col-md-8">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper convallis quam, vel interdum augue scelerisque id. Aliquam pretium ligula ut auctor porta. Ut est orci, placerat in dignissim ut, gravida eu elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ut pellentesque felis. Proin sodales viverra nibh placerat congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                            <div class="pad-top"></div>
+                            <h4 class="top-bar">Past Robots</h4>
+                            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingOne">
+                                        <h4 class="panel-title">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#a-robot-skyrise" aria-expanded="true" aria-controls="collapseOne">
+                                                <span class="glyphicon glyphicon-tower">&nbsp;</span>Robot: Skyrise
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="a-robot-skyrise" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                        <div class="panel-body">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingOne">
+                                        <h4 class="panel-title">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#a-robot-nbn" aria-expanded="true" aria-controls="collapseOne">
+                                                <span class="glyphicon glyphicon-tower">&nbsp;</span>Robot: Nothing But Net
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="a-robot-nbn" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                        <div class="panel-body">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Team 3796B</h3>Some Assembly Required
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-xs-12 col-md-4">
+                    <img class="img-responsive" src="https://dummyimage.com/800x500/000000/fff">
+                </div>
+                <div class="col-xs-12 col-md-8">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper convallis quam, vel interdum augue scelerisque id. Aliquam pretium ligula ut auctor porta. Ut est orci, placerat in dignissim ut, gravida eu elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ut pellentesque felis. Proin sodales viverra nibh placerat congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="pad-top"></div>
+                            <h4 class="top-bar">Past Robots</h4>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingOne">
+                                        <h4 class="panel-title">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#b-robot-nbn" aria-expanded="true" aria-controls="collapseOne">
+                                                <span class="glyphicon glyphicon-tower">&nbsp;</span>Robot: Nothing But Net
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="b-robot-nbn" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                        <div class="panel-body">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Team 3796C</h3>Womann
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-xs-12 col-md-4">
+                    <img class="img-responsive" src="https://dummyimage.com/800x500/000000/fff">
+                </div>
+                <div class="col-xs-12 col-md-8">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper convallis quam, vel interdum augue scelerisque id. Aliquam pretium ligula ut auctor porta. Ut est orci, placerat in dignissim ut, gravida eu elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ut pellentesque felis. Proin sodales viverra nibh placerat congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                </div>
+            </div>
+        </div>
+    </div>

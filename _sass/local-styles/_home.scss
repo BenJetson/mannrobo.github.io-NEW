@@ -1,0 +1,31 @@
+// #site-main-jumbotron {
+//     // padding: 0;
+//     height: $site-jumbotron-height;
+//     background: transparent;
+//     color: #fff;
+//     text-shadow: #555 0 1px 1px;
+// }
+
+// #site-main-jumbotron-bg {
+//     height: $site-jumbotron-height;
+//     top: $navbar-height;
+//     left: 0;
+//     z-index: -1;
+//     width: 100%;
+//     position: fixed;
+//     background: url("https://mannrobo.github.io/img/banner.jpg");
+// }
+
+.top-bar {
+    border-top: 1px solid $gray-light;
+    padding-top: 12px;
+}
+
+.post-list-item .post-excerpt {
+    line-height: 1.2;
+    height: 5em;    
+}
+
+.post-meta {
+    margin-bottom: 5px;
+}

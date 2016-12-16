@@ -7,6 +7,9 @@
     {% for request in page.deps %}<meta depend feature="{{request}}">{% endfor %}
     {% for request in site.globalDeps %}<meta global depend feature="{{request}}">{% endfor %}
     <title>Bootstrap Test Page</title>
+    
+    <!-- Stylesheet -->
+    <link defer rel="stylesheet" href="{{site.url}}css/main.css">
 
     <!-- jQuery Library -->
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -24,10 +27,7 @@
     <script defer src="{{site.url}}js/depend-initialize.js"></script>
 
     <!-- Web Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{site.url}}css/main.css">
+    <link defer href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

@@ -11,6 +11,6 @@ dependencies:
 test:
   override:
     - cd ~/mannrobo.github.io
-    - ./.tests/debug-output.sh
+    # - ./.tests/debug-output.sh # DEBUG OUTPUT SCRIPT
     - ./.tests/config-check.sh
     - jekyll build
